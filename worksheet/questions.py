@@ -46,6 +46,25 @@ def q7():
     for _ in range(len(stack)):
         output += str(stack.pop()+1) + " "
     print(output)
+    return
+def q8():
+    num = int(input("Ending POSITIVE INTEGER: "))
+    i = 1
+    output = ""
+    interval = int(input("Interval (POSITIVE INTEGER):"))
+    while i < num:
+        output += str(i) + " "
+        i += interval
+    print(output)
+    return
+def q9():
+    items = 10
+    largest = float(input("Input a number: "))
+    for _ in range(items-1):
+        x = float(input("Input a number"))
+        largest = x if x > largest else largest
+    print(str(largest) + " is largest")
+    return
 # q1()
 # q2()
 # q3()
@@ -53,3 +72,5 @@ def q7():
 # q5()
 q6()
 q7()
+q8()
+q9()
