@@ -89,6 +89,25 @@ def q8():
 
 
 def q9():
+    """
+    DECLARE Items: INT
+    DECLARE Largest: DECIMAL
+    Items = 10
+    OUTPUT "Input a number: "
+    INPUT Largest
+    FOR I <- 1 TO Items
+        OUTPUT "Input a number: "
+        INPUT X
+        IF X > Largest
+            THEN
+                Largest <- X
+        ELSE
+            THEN
+                Largest <- Largest
+        ENDIF
+    NEXT I
+    OUTPUT "Largest is ", Largest
+    """
     items = 10
     largest = float(input("Input a number: "))
     for _ in range(items - 1):
@@ -99,6 +118,25 @@ def q9():
 
 
 def q10():
+    """
+    DECLARE Items: INT
+    DECLARE Smallest: DECIMAL
+    Items = 10
+    OUTPUT "Input a number: "
+    INPUT Smallest
+    FOR I <- 1 TO Items
+        OUTPUT "Input a number: "
+        INPUT X
+        IF X < Smallest
+            THEN
+                Smallest <- X
+        ELSE
+            THEN
+                Smallest <- Smallest
+        ENDIF
+    NEXT I
+    OUTPUT "Smallest is ", Smallest
+    """
     items = 10
     smallest = float(input("Input a number: "))
     for _ in range(items - 1):
@@ -109,6 +147,9 @@ def q10():
 
 
 def q11():
+    """
+    DECLARE Number: INT
+    """
     while True:
         number = float(input("Input number between 1 and 5: "))
         if number >= 1 and number <= 5:
@@ -121,7 +162,7 @@ def q11():
 
 def q12():
     a = int(input("Input first integer:"))
-    b = int(input("Input second in"))
+    b = int(input("Input second integer: "))
     nums = list(range(a, b + 1))
     print(nums)
     print(" ".join(map(lambda x: str(x), nums)))
