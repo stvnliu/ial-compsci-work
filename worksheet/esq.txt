@@ -1,0 +1,16 @@
+Exam-Style Questions
+DECLARE Weighting: INTEGER = 10
+DECLARE Total: INTEGER = 0
+DECLARE Count: INTEGER = 1
+DECLARE Digit: INTEGER
+DECLARE Remainder: INTEGER
+DECLARE Checkdigit: STRING
+FOR Count <- 1 TO 9
+	INPUT Digit
+	Value <- Digit * Weighting
+	Total <- Total + Value
+	Weighting = Weighting + 1
+NEXT Count
+Remainder <- Total MOD 11
+CheckDigit <- 11 - Remainder
+IF CheckDigit = 10 THEN CheckDigit = "X"
