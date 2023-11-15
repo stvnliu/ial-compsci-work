@@ -1,0 +1,18 @@
+Q5 
+a) 
+	i) Assignment at line number 13
+	ii) Selection at line number 11
+	iii) Iteration at line number 01
+b) 
+Identifier name      | Description
+Choice               | INTEGER Choice variable for selection of valid modes
+Temperature          | REAL The raw temperature data value
+ConvertedTemperature | REAL The value for the converted temperature
+
+c)
+INSERT INTO code BETWEEN 05 and 07
+05 WHILE Choice != 1 AND Choice != 2 AND Choice != 3 DO
+06 	OUTPUT "Choice invalid! Retry: "
+07	INPUT Choice
+08 ENDWHILE
+	
