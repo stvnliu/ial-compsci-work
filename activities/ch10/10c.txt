@@ -1,0 +1,18 @@
+Q1
+TYPE
+TStudentRecord
+	DECLARE name : STRING
+	DECLARE dateOfBirth : DATE
+	DECLARE class : STRING
+	DECLARE gender : STRING
+ENDTYPE
+
+Q2
+DECLARE myStudent : TStudentRecord
+myStudent.name <- "Ahmad Sayed"
+myStudent.dateOfBirth <- "2010-03-21"
+myStudent.class <- "5A"
+myStudent.gender <- "Male"
+
+Q3
+<written in ./10c.q3.ts>
