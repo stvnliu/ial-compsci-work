@@ -1,0 +1,4 @@
+DECLARE Name: STRING
+DECLARE: NumChildrenInClass: INTEGER
+DECLARE: RaceTimeTaken: REAL
+DECLARE: DoorState: BOOLEAN
