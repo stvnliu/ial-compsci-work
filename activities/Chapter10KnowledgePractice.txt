@@ -1,0 +1,18 @@
+DECLARE Largest, Smallest, Counter: INTEGER
+DECLARE NumberStore: ARRAY[1:5] OF INTEGER
+FOR Counter <- 1 TO 5
+	OUTPUT "Enter number ", Counter
+	INPUT NumberStore[Counter]
+NEXT Counter
+Largest <- Counter[1]
+Smallest <- Counter[1]
+FOR Counter <- 2 TO 5
+	IF NumberStore[Counter] > Largest THEN
+		Largest <- NumberStore[Counter]
+	ENDIF
+	IF NumberStore[Counter] < Smallest THEN
+		Smallest <- NumberStore[Counter]
+	ENDIF
+NEXT Counter
+OUTPUT "Largest = ", Largest
+OUTPUT "Smallest = ", Smallest
