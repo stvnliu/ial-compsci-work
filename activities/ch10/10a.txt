@@ -1,0 +1,5 @@
+a) STRING
+b) INTEGER
+c) REAL
+d) BOOLEAN
+e) DATE
