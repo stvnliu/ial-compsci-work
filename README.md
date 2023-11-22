@@ -6,13 +6,13 @@ I mean, just pull request? This is just my personal repository of notes and work
 ## Completeness
 ### Theory
 Theory notes are done through Markdown files in `ch(nn).md` format.
-- [] Chapter 1 - Information representation and multimedia
-- [] Chapter 2 - Communication
-- [] Chapter 3 - Hardware
-- [] ::
-- [] ::
-- [] Chapter 8 - Databases
+- [ ] Chapter 1 - Information representation and multimedia
+- [ ] Chapter 2 - Communication
+- [ ] Chapter 3 - Hardware
+- [ ] ::
+- [ ] ::
+- [ ] Chapter 8 - Databases
 ### Practical
 Practical notes are done through Markdown and Python files in `ch(nn).(py/md)` format.
 - [x] Chapter 9 - Algorithm design and problem solving
-- [] Chapter 10 - Data types and structures [WIP]
+- [ ] Chapter 10 - Data types and structures [WIP]
