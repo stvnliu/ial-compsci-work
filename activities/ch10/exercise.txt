@@ -1,0 +1,7 @@
+DECLARE myArray: ARRAY[0:8] OF INTEGER
+DECLARE tmp: INTEGER
+FOR Counter <- 0 TO 8
+	OUTPUT "Value at position ", Counter
+	INPUT tmp
+	myArray[Counter] <- tmp
+NEXT Counter
