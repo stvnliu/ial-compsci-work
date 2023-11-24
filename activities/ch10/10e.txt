@@ -1,9 +1,9 @@
-DECLARE myArray : ARRAY[1:10, 1:3] OF INTEGER
+DECLARE myArray : ARRAY[0:8, 0:2] OF INTEGER
 DECLARE CounterRow : INTEGER
 DECLARE CounterCol : INTEGER
 DECLARE InputVal : INTEGER 
-FOR CounterRow <- 1 TO 10
-	FOR CounterCol <- 1 TO 3
+FOR CounterRow <- 1 TO 8
+	FOR CounterCol <- 1 TO 2
 		OUTPUT "Value at Row ", CounterRow, " Column ", CounterCol
 		INPUT InputVal
 		myArray[CounterRow, CounterCol] <- InputVal
