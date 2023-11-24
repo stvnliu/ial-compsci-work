@@ -1,4 +1,6 @@
 # Abstract data types
+> Abstract data types are specialized array types that are modified by pointers in particular ways.
+> ADTs are fundamental to modern data structures, data management, and the implementation of relevant algorithms
 ## Definitions
 Abstract data types (ADTs) have **3 types**:
 - Stack
