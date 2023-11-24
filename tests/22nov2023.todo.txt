@@ -1,4 +1,0 @@
-Q1: Write a program in Pseudocode that does the following:
-// TODO 1: Fill in the rest of the question
-Q2: Write a program in Pseudocode that represents the following flowchart. Use a WHILE loop.
-// TODO 2: Fill in the rest of the question
