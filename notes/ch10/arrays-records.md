@@ -91,3 +91,50 @@ for row in table:
     output += f"{' '.join(row)}\n"
 print(output)
 ```
+## Implementing Linear search on an Array
+```
+DECLARE arr : ARRAY[0:<endIndex>] OF INTEGER
+DECLARE item, ptr : INTEGER
+DECLARE found : BOOLEAN
+found <- FALSE
+ptr <- 0
+OUTPUT "Value of item to match: "
+INPUT item
+WHILE ptr < LENGTH(arr) OR found <> TRUE DO
+    IF arr[ptr] = item
+        THEN
+            found <- TRUE
+            OUTPUT "Match for ", item, " found at position ", index
+    ENDIF
+    ptr <- ptr + 1
+```
+
+## Implementing Bubble sort on an Array
+```
+DECLARE arr : ARRAY[0:<endIndex>] OF INTEGER
+DECLARE ptr, swp, check, i: INTEGER
+check <- 0
+WHILE check < LENGTH(arr) - 1 DO            // gatekeeper loop; ensures that array after loop is properly sorted - array with LENGTH {x} can have at most {x-1} sorted element pairs  
+    FOR ptr <- 0 TO LENGTH(arr) - 1
+        IF arr[ptr] > arr[ptr + 1]          // Ascending sort: > ; Descending sort: <
+            THEN
+                swp <- arr[ptr]             // "cache" the arr[ptr] element to be referenced
+                arr[ptr] <- arr[ptr + 1]    // alter value of arr[ptr] element (hence why we need swp (swap variable) to temporarily store value of arr[ptr])
+                arr[ptr + 1] <- swp         // alter value of arr[ptr+1] (next-in-line) element with cached arr[ptr] value - swapping
+            ELSE
+                check <- check + 1          // incr. checks if this element pair passed check
+        ENDIF
+    NEXT ptr                                // incr. ptr to loop to the next element
+ENDWHILE
+
+// output result of sorted arr
+FOR i <- 0 TO LENGTH(arr)
+    OUTPUT "Element at pos ", i, ": ", arr[i]
+NEXT i
+```
+### Explanation
+The algorithm implemented above utilizes, most significantly, the check and ptr variable.
+The check variable is used to verify that the array has been completely sorted before moving on with the program.
+**This also means there will be always one iteration at the end where all elements are sorted, 
+and the algorithm checks for all of the elements pass.**
+The variable `swp` (shorthand for `swap`) is a temporary variable in place to cache the value of the element to prevent it from being modified by other processes.
