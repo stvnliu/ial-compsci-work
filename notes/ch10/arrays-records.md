@@ -1,4 +1,4 @@
-# Chapter 10 - Data types
+# Records and arrays
 Common datatypes contain (For pseudocode):
 REAL, CHAR, INTEGER, STRING, ARRAY[T], BOOLEAN
 ## Composite data types with Records
