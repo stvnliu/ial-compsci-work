@@ -29,13 +29,19 @@ To reference a value inside a Record:
 DECLARE Obj : TObjType
 Obj.prop1 <- "Value1"
 ```
+
+
 ## 10.2 Arrays as collections of data
+
+
 An **array** is a data structure containing serveral elements of the same data type: these elements can be accessed using the **same identifier name**. The position of each element in an array is defined using the array's **index**.
 An array is defined in pseudocode as  
 `DECLARE ArrayVariable : ARRAY[<start>:<end>] OF <type>`
 A value can be the referenced from `ArrayVariable` in this format:  
 `OUTPUT ArrayVariable[<index>] // where <start> < <index> < <end>`  
+
 ### Populating an array
+
 ```
 FOR Counter <- <start> to <end>
     OUTPUT "Input value at pos ", Counter
@@ -55,7 +61,11 @@ print(".".join(array))
 for i in range(len(array)):
     print(array[i])
 ```
+
+
 ## 10.2.2 2-dimentional arrays
+
+
 Essentially, 2-dimentional arrays are tables, aka. **arrays within arrays**.  
 In pseudocode, it can be defined by: 
 ```
@@ -63,7 +73,9 @@ DECLARE <ident> : ARRAY[<lbound_row>:<hbound_row>, <lbound_col>:<hbound_col>] OF
 // Example
 DECLARE table : ARRAY[0:10, 0:5] OF INTEGER 
 ```
+
 ### Populate each element of a table
+
 ```
 DECLARE table : ARRAY[0:10, 0:5] OF INTEGER     // First index = rows, second index = cols
 DECLARE InputVal: INTEGER
@@ -75,11 +87,13 @@ FOR I <- 0 TO 10                                // Row loop
     NEXT J
 NEXT I
 ```
+
 **Implementation in Python**
+
 ```python
 table: list = []
-rows: int = 3
-cols: int = 3
+rows: int = int(input("Rows: "))
+cols: int = int(input("Columns: "))
 for i in range(rows):               # Loop over each row
     row = []
     for j in range(cols):           # Loop over each column
@@ -91,7 +105,11 @@ for row in table:
     output += f"{' '.join(row)}\n"
 print(output)
 ```
+
+
 ## Implementing Linear search on an Array
+
+
 ```
 DECLARE arr : ARRAY[0:<endIndex>] OF INTEGER
 DECLARE item, ptr : INTEGER
@@ -109,7 +127,10 @@ WHILE ptr < LENGTH(arr) OR found <> TRUE DO
     ptr <- ptr + 1
 ```
 
+
 ## Implementing Bubble sort on an Array
+
+
 ```
 DECLARE arr : ARRAY[0:<endIndex>] OF INTEGER
 DECLARE ptr, swp, check, i: INTEGER
@@ -132,7 +153,9 @@ FOR i <- 0 TO LENGTH(arr)
     OUTPUT "Element at pos ", i, ": ", arr[i]
 NEXT i
 ```
+
 ### Explanation
+
 The algorithm implemented above utilizes, most significantly, the check and ptr variable.
 The check variable is used to verify that the array has been completely sorted before moving on with the program.
 **This also means there will be always one iteration at the end where all elements are sorted, 
