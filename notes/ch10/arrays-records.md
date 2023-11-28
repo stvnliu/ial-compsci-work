@@ -29,8 +29,48 @@ To reference a value inside a Record:
 DECLARE Obj : TObjType
 Obj.prop1 <- "Value1"
 ```
+**Implementation in Java**
+```java
+public class Job {                                                                              // Defining template for inner class object
+    private int payCents;
+    public Job(int payCents) {
+        this.payCents = payCents;
+        return;
+    }
+    public int getPayCents() {
+        return this.payCents;
+    }
+}
+public class Person {                                                                           // Defining template for class object
+    private String name;
+    private Job job;
+    private LocalDate dateBirth;
+    public Person(String name, Job job, LocalDate dateBirth) {
+        this.name = name;
+        this.job = job;
+        this.dateBirth = dateBirth;
+        return;
+    }
+    public String getName() {
+        return this.name;
+    }
+    public Job getJob() {
+        return this.job;
+    }
+    public LocalDate getDateBirth() {
+        return this.dateBirth;
+    }
+}
 
-
+public class MainApp {
+    public static void main(String[] args) {
+        Person person = new Person("Jack", new Job(450000), new LocalDate("2007-01-01"));       // Object initialization
+        System.out.println(person.name);
+    }
+}
+```
+### Explanation
+Object definitions `RECORD`s can also include other object type definitions for the construction of multi-property multi-layer complex data types that encapsulate relevant data well, and can be used in enterprise-grade applications.
 ## 10.2 Arrays as collections of data
 
 
