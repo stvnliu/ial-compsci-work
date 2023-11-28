@@ -166,7 +166,24 @@ WHILE ptr < LENGTH(arr) OR found <> TRUE DO
     ENDIF
     ptr <- ptr + 1
 ```
-
+**Implementation in Python**
+```
+import random
+def generate_test_data(int length):
+    arr = []
+    for i in range(length):
+        arr.append(random.randint(0, 100))
+    return arr
+test_data = generate_test_data(length)
+found = False
+match_data = int(input("Which one would you like to match for?"))
+for data, index in test_data:
+    if data == match_data:
+        print(f"Found match for {data} at position {index}")
+        break
+    else:
+        pass
+```
 
 ## Implementing Bubble sort on an Array
 
