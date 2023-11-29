@@ -229,4 +229,16 @@ def generate_test_data(length: int):
         arr.append(random.randint(0, 100)
     return arr
 testarr = generate_test_data(10)
+index = 0
+while checks < len(testarr): 
+    checks = 0
+    while index < len(testarr):
+        if testarr[index] > testarr[index+1]:
+            swp = testarr[index]
+            testarr[index] = testarr[index+1]
+            testarr[index+1] = swp
+        else:
+            checks += 1
+        index += 1
+print(testarr)
 ```

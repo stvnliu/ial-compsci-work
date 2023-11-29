@@ -1,0 +1,23 @@
+DECLARE nameInput 		: STRING
+DECLARE ageFound, pointer 	: INTEGER
+DECLARE name 			: ARRAY[0:19] OF STRING
+DECLARE age 			: ARRAY[0:19] OF INTEGER
+DECLARE found			: BOOLEAN
+OUTPUT "Input your target name: "
+INPUT nameInput
+pointer <- 0
+found <- False
+WHILE pointer < LENGTH(name) OR NOT found DO
+	IF name[pointer] = nameInput
+		THEN
+			found <- True
+			ageFound <- age[pointer]
+	ENDIF
+	pointer <- pointer + 1
+ENDWHILE
+IF found = True 
+	THEN 
+		OUTPUT "Age found: ", ageFound 
+	ELSE 
+		OUTPUT "Age not found!"
+ENDIF
