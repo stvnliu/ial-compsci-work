@@ -1,0 +1,14 @@
+DECLARE myList : ARRAY[0:8] OF INTEGER
+DECLARE item, index, tmpIndex: INTEGER
+DECLARE found : BOOLEAN
+myList <- [27, 19, 36, 42, 16, 89, 21, 16, 55]  // sample data from Figure 10.1
+OUTPUT "Value of item to be found: "
+INPUT item
+found <- FALSE
+WHILE item < LENGTH(myList) OR found <> TRUE DO
+	IF myList[tmpIndex] = item
+		THEN
+			found <- TRUE
+			index <- tmpIndex
+	ENDIF
+OUTPUT "Found item ", item, " at position ", index, " in list"
