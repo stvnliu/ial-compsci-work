@@ -218,3 +218,15 @@ The check variable is used to verify that the array has been completely sorted b
 **This also means there will be always one iteration at the end where all elements are sorted, 
 and the algorithm checks for all of the elements pass.**
 The variable `swp` (shorthand for `swap`) is a temporary variable in place to cache the value of the element to prevent it from being modified by other processes.
+
+**Implementation in Python**
+```python
+import random
+
+def generate_test_data(length: int):
+    arr = []
+    for i in range(length):
+        arr.append(random.randint(0, 100)
+    return arr
+testarr = generate_test_data(10)
+```
