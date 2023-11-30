@@ -4,7 +4,6 @@ def generate_test_seq(length: int):
     for i in range(length):
         arr.append(random.randint(0, 100))
     return arr
-TESTING_ITERATIONS = 10
 def bubble_sort(arr):
     n = len(arr)
     swapped = False
@@ -23,6 +22,7 @@ def verify(arr):
     return True
 # Output result
 if __name__ == "__main__":
+    TESTING_ITERATIONS = int(input("How many arrays would you like to test for? : "))
     for i in range(TESTING_ITERATIONS):
         arr = generate_test_seq(10)
         bubble_sort(arr)
