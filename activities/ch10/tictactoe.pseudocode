@@ -1,0 +1,30 @@
+DECLARE board : 	ARRAY[0:2, 0:2] OF CHAR
+DECLARE continue, won: 	BOOLEAN
+DECLARE curPlayer : 	CHAR
+DECLARE xPos, yPos :	INTEGER
+PROCEDURE printBoardStatus DO
+	FOR i <- 0 TO 2
+		OUTPUT "|"+board[0]+"|"+"board[1]"+"|"+board[2]+"|"
+	RETURN
+ENDPROCEDURE
+FUNCTION checkIfWin DO
+	
+	RETURN won
+ENDFUNCTION
+curPlayer <- "X"
+
+// Main game loop
+WHILE continue == TRUE DO
+	OUTPUT "X position for player ", curPlayer
+	INPUT xPos
+	OUTPUT "Y position for player ", curPlayer
+	INPUT yPos
+	IF board[yPos, xPos] = "X" OR board[yPos, xPos] = "O"
+		THEN
+			OUTPUT "Position occupied!"
+		ELSE
+			board[yPos, xPos] <- curPlayer
+			CALL printBoardStatus
+	ENDIF
+ENDWHILE
+
