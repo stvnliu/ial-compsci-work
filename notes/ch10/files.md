@@ -10,7 +10,7 @@ DECLARE filePath :          STRING
 DECLARE userInput, out :    STRING
 OUTPUT "File path: "
 INPUT filePath
-OPEN filePath FOR WRITE
+OPEN filePath FOR WRITE             // file path for write (OVERWRITING)
 REPEAT
     OUTPUT "> "
     INPUT userInput
