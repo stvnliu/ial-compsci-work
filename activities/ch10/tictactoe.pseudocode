@@ -1,14 +1,28 @@
-DECLARE board : 	ARRAY[0:2, 0:2] OF CHAR
-DECLARE continue, won: 	BOOLEAN
-DECLARE curPlayer : 	CHAR
-DECLARE xPos, yPos :	INTEGER
+DECLARE board : 		ARRAY[0:2, 0:2] OF CHAR
+DECLARE continue, won, hasWon :	BOOLEAN
+DECLARE curPlayer : 		CHAR
+DECLARE xPos, yPos :		INTEGER
+DECLARE winPositions :		ARRAY[0:8, 0:2, 0:1] OF INTEGER
+FOR i <- 0 TO 2
+	FOR j <- 0 TO 2
+		board[i, j] <- " "
+	NEXT j
+NEXT i
 PROCEDURE printBoardStatus DO
 	FOR i <- 0 TO 2
 		OUTPUT "|"+board[i, 0]+"|"+"board[i, 1]"+"|"+board[i, 2]+"|"
+	NEXT i
 	RETURN
 ENDPROCEDURE
 FUNCTION checkIfWin DO
-	
+	won <- FALSE
+	FOR k <- 0 TO LENGTH(winPositions)
+		test = winPositions[k]
+		IF board[test[0, 0], test[0, 1]] = board[test[1, 0], test[1, 1]] = board[test[2, 0], test[2, 1]]
+			THEN
+				won <- TRUE
+		ENDIF
+	NEXT k
 	RETURN won
 ENDFUNCTION
 curPlayer <- "X"
@@ -25,6 +39,12 @@ WHILE continue == TRUE DO
 		ELSE
 			board[yPos, xPos] <- curPlayer
 			CALL printBoardStatus
+	ENDIF
+	hasWon <- CALL checkIfWin()
+	IF hasWon == TRUE
+		THEN
+			continue == FALSE
+			OUTPUT curPlayer, " has won!"
 	ENDIF
 ENDWHILE
 
