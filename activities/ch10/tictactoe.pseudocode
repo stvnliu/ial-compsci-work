@@ -4,7 +4,7 @@ DECLARE curPlayer : 	CHAR
 DECLARE xPos, yPos :	INTEGER
 PROCEDURE printBoardStatus DO
 	FOR i <- 0 TO 2
-		OUTPUT "|"+board[0]+"|"+"board[1]"+"|"+board[2]+"|"
+		OUTPUT "|"+board[i, 0]+"|"+"board[i, 1]"+"|"+board[i, 2]+"|"
 	RETURN
 ENDPROCEDURE
 FUNCTION checkIfWin DO
