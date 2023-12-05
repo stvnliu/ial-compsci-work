@@ -60,6 +60,7 @@ REPEAT
 	OUTPUT line
 UNTIL EOF(path)
 CLOSEFILE(path)
+
 #7
 DECLARE rpath, wpath, line: 	STRING
 OUTPUT "Read from file path: "
