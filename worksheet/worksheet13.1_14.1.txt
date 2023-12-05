@@ -49,3 +49,28 @@ REPEAT
   INPUT row
   my2DList[col, row] <- my2DList[col, row] + 1
 UNTIL col = 0 OR row = 0
+
+#6
+DECLARE path, line : 	STRING
+OUTPUT "File path: "
+INPUT path
+OPEN path FOR READ
+REPEAT
+	READFILE path, line
+	OUTPUT line
+UNTIL EOF(path)
+CLOSEFILE(path)
+#7
+DECLARE rpath, wpath, line: 	STRING
+OUTPUT "Read from file path: "
+INPUT rpath
+OUTPUT "Write to file path: "
+INPUT wpath
+OPEN rpath FOR READ
+OPEN wpath FOR APPEND
+REPEAT
+	READFILE rpath, line
+	WRITEFILE wpath, line
+UNTIL EOF(rpath)
+CLOSEFILE(rpath)
+CLOSEFILE(wpath)
