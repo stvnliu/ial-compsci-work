@@ -1,0 +1,45 @@
+#1
+DECLARE myList : ARRAY [1:10] OF INTEGER
+DECLARE counter : INTERGER
+
+FOR counter <- 1 TO 10
+  myList[counter] <- 0
+NEXT counter
+
+PRINT myList
+
+#2
+FOR counter <- 1 TO 10
+  myList[counter] <- counter
+NEXT Counter
+
+#3
+DECLARE num : INTEGER
+
+REPEAT
+  OUTPUT "Please enter a number: "
+  INPUT num
+  myList[num] <- myList[num] + 1
+UNTIL num = 0
+
+#4
+DECLARE my2DList : [1:5, 1:5] OF REAL
+DECLARE col : INTEGER
+DECLARE row : INTEGER
+
+FOR col <- 1 TO 5
+  FOR row <- 1 TO 5
+    my2DList[col, row] <- 0
+  NEXT row
+NEXT col
+
+PRINT myList
+
+#5
+REPEAT 
+  OUTPUT "Enter column number: "
+  INPUT col
+  OUTPUT "Enter row number: "
+  INPUT row
+  my2DList[col, row] <- my2DList[col, row] + 1
+UNTIL col = 0 OR row = 0
