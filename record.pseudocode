@@ -1,0 +1,12 @@
+TYPE Book:
+	title:		STRING
+	yearPublished:	DATE
+	priceCents:	INTEGER
+	isbn:		INTEGER
+ENDTYPE
+
+DECLARE Book1 : Book
+Book.title <- "Computer Science"
+Book.yearPublished <- 2019
+Book.priceCents <- 4495
+Book.isbn <- 9781108733755

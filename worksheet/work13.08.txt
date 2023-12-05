@@ -1,0 +1,7 @@
+DECLARE table:	ARRAY[0:2, 0:2] OF CHAR
+FOR i <- 0 TO 2
+	FOR j <- 0 TO 2
+		table[i, j] <- " "
+	NEXT j
+NEXT i
+
