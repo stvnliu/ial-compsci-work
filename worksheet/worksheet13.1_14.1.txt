@@ -15,12 +15,17 @@ FOR counter <- 1 TO 10
 NEXT Counter
 
 #3
-DECLARE num : INTEGER
+DECLARE myList : 	ARRAY[0:9] OF INTEGER
+DECLARE num : 		INTEGER
 
 REPEAT
-  OUTPUT "Please enter a number: "
-  INPUT num
-  myList[num] <- myList[num] + 1
+  	OUTPUT "Please enter a number: "
+  	INPUT num
+  	IF num >= 1 AND num <= 10
+		THEN
+  			myList[num-1] <- myList[num-1] + 1
+		ELSE
+			OUTPUT "Input invalid!"
 UNTIL num = 0
 
 #4
