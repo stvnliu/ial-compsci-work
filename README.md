@@ -15,4 +15,4 @@ Theory notes are done through Markdown files in `ch(nn).md` format.
 ### Practical
 Practical notes are done through Markdown and Python files in `ch(nn).(py/md)` format.
 - [x] Chapter 9 - Algorithm design and problem solving
-- [ ] Chapter 10 - Data types and structures [WIP]
+- [X] Chapter 10 - Data types and structures
