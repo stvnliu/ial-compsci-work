@@ -1,0 +1,42 @@
+100		LDM #0
+101		STO IX		; Store number 0 to IX to start arr pointer
+102	loop:	LDX arr		; Query each element beginning from the starting 0th pointer
+103		OUT
+104		INC IX
+105		LDD IX
+106		CMP #4
+107		JPN loop
+108		END
+200	arr:	#60
+201		#61
+202		#62
+203		#63
+
+CIR	Opc	Opr	ACC	IX	OUT
+100	LDM	#0	0
+101	STO	IX	0	0
+102	LDX	arr	60	0
+103	OUT		60	0	60
+104	INC	IX	60	1
+105	LDD	IX	1	1
+106	CMP	#4	1	1
+107	JPN	loop	1	1
+102	LDX	arr	61	1
+103	OUT		61	1	61
+104	INC	IX	61	2
+105	LDD	IX	2	2
+106	CMP	#4	2	2
+107	JPN	loop	2	2
+102	LDX	arr	62	2
+103	OUT		62	2	62
+104	INC	IX	62	3
+105	LDD	IX	3	3
+106	CMP	#4	3	3
+107	JPN	loop	3	3
+102	LDX	arr	63	3
+103	OUT		63	3	63
+104	INC	IX	63	4
+105	LDD	IX	4	4
+106	CMP	#4	4	4
+107	JPN	loop
+108	END

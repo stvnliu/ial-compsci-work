@@ -1,0 +1,54 @@
+start:	LDM 	#B01011101	; STARTPROG 1
+	LSL 	1
+	STO 	num
+	LDD 	x
+	OR 	y
+	STO	result
+num:	#B00000000
+x:	#B01010101
+y:	#B10101010
+result:	#B00000000
+section .text
+					; STARTPROG 2
+	prog:	LDD	sensors
+		AND	mask		; ACC matches if bit at mask position is 1
+		PUSH
+		CMP	mask		; if ACC is not zero, sensor value is equal to mask, bit is 1
+		LDD	mask
+		LSL	#1		; shifts mask scan head to next bit
+		CMP	maskend		; if the mask has overflow and is set to zero, reset to starting position
+		JPE	reset		; reset scan head to init position
+		STO	mask
+		JPN	signal		; signal processing hook
+	reset:	LDM	#B0000001
+		STO	mask
+	signal:	POP
+		CMP	mask
+		JPE	procs
+		LDD	IX
+		INC
+		LDD	mask
+		LSL	#1
+		CMP	maskend
+		JPE	reset
+		STO	mask
+	procs:	LDX	addrs
+		STO	nextcmd
+		JMP	nextcmd
+section .data
+	nextcmd:#B11111111
+	mask:	#B00000001
+	maskend:#B00000000
+	sensors:#B00000001
+	addrs:	JMP proc0
+		JMP proc1
+		JMP proc2
+		JMP proc3
+		JMP proc4
+		JMP proc5
+		JMP proc6
+		JMP proc7
+	proc0:	NOP			; WIP sigproc task 1
+	proc1:	NOP			; WIP sigproc task 2
+	...				; WIP ...
+	proc7:	NOP			; WIP sigproc task 7

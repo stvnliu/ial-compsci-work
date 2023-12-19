@@ -1,0 +1,31 @@
+Activity 4B
+1.
+	a)
+		i) LDM #200 => [ACC] = 200
+		ii) LDD 200 => [ACC] = 300
+		iii) LDI 200 => [ACC] = 50
+	b)
+		i) CMP #5
+		ii) JPE 100
+2.
+	a)	nomore 	| 107
+		number1	| 109
+		number2	| 110
+		number3	| 111
+		number4	| 112
+		total	| 113
+	b)
+|CIR	|Opcode		|Operand	|ACC	|IX	|total	|
+|-------|---------------|---------------|-------|-------|-------|
+|100	|LDD		|number1	|30	|	|0	|
+|101	|SUB		|number2	|-10	|	|0	|
+|102	|ADD		|number3	|10	|	|0	|
+|103	|CMP		|#10		|10	|	|0	|
+|104	|JPE		|nomore		|10	|	|0	|
+|106	|STO		|total		|10	|	|10	|
+|107	|END		|		|	|	|	|
+	
+	c) Add number 1 and number 3, subtract by number 2. If the result is not equal to 10, add number 4 to the total also.
+3.
+	a)
+		
