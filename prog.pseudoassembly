@@ -48,7 +48,7 @@ section .data
 		JMP proc5
 		JMP proc6
 		JMP proc7
-	proc0:	NOP			; WIP sigproc task 1
+	proc0:	NOP			; WIP sigproc task 1 humidity
 	proc1:	NOP			; WIP sigproc task 2
 	...				; WIP ...
 	proc7:	NOP			; WIP sigproc task 7
