@@ -14,7 +14,7 @@ Abstract data types (ADTs) have **3 types**:
     - `frontPointer` at `queue[0]`; `endPointer` at `queue[LENGTH(queue) - 1]`.
     - When `enqueue`, `endPointer++`; when `dequeue`, `frontPointer--`.
     - Queue consists of only one item when `frontPointer == endPointer`.
-- **LinkedList**
+- **Linked List**
     - Each element contains a "data" value and a "goto (aka. node)" value.
     - For an array implementing Linked List operations `linklist OF INTEGER`, data value is at `linklist[x][0]`; node value a `linklist[x][1]`. Where `x` is the index of pair in linked list. 
 ## Implementation

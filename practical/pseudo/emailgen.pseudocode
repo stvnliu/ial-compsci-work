@@ -1,0 +1,11 @@
+// Generates an email address using a first name, 
+OUTPUT "Enter your first name: "
+INPUT FirstName
+OUTPUT "Enter your last name: "
+INPUT LastName
+OUTPUT "Enter your organization domain: "
+INPUT OrgDomain
+Email = TO_LOWER(LEFT(FirstName, 1), ".", LEFT(LastName, 4), "@", OrgDomain)
+
+// Activity 11B
+

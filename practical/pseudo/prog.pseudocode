@@ -1,0 +1,25 @@
+DECLARE height, width : REAL
+DECLARE CONSTANT maxHeight : REAL = 25
+DECLARE CONSTANT maxWidth : REAL = 30
+DECLARE op : CHAR
+REPEAT
+        OUTPUT "Please input a valid height: "
+        INPUT height
+UNTIL height > 0 and height < maxHeight
+REPEAT
+        OUTPUT "Please input a valid width: "
+        INPUT width
+UNTIL width > 0 and width < maxWidth
+
+OUTPUT "'h' for calculating the hypotenuse; "
+OUTPUT "'a' for calculating the area; "
+OUTPUT "'p' for calculating the perimeter; "
+OUTPUT "Which operation would you like to take? : "
+INPUT op
+CASE OF op:
+        'h':
+                OUTPUT "The hypotenuse is ", SQUAREROOT(height * height + width * width)
+        'a':
+                OUTPUT "The area is ", height * width / 2
+        'p':
+                OUTPUT "The perimeter is ", height + width + SQUAREROOT(height * height + width * width)

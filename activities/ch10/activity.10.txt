@@ -1,0 +1,12 @@
+Activity 10J
+drawing:
+9	
+8	
+7
+6
+5	92 <- topPointer
+4	67
+3	87
+2	18
+1	32 <- basePointer
+
